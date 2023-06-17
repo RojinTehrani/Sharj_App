@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_splash"
+    android:background="#FFFFFF"
+    >
+
+<com.airbnb.lottie.LottieAnimationView
+    android:id="@+id/payment"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="60dp"
+    app:lottie_fileName="96570-payments-app-hero.json"
+    app:lottie_autoPlay="true"
+    app:lottie_loop="true"
+    android:foregroundGravity="top"
+    />
+<com.airbnb.lottie.LottieAnimationView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:lottie_autoPlay="true"
+    app:lottie_loop="true"
+    app:lottie_fileName="91198-splash-chosen.json"
+
+
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-150dp"
+        android:fontFamily="@font/graph"
+        android:text="شارژینو"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
+
+</RelativeLayout>
