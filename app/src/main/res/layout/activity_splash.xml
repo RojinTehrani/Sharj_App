@@ -19,26 +19,26 @@
     app:lottie_loop="true"
     android:foregroundGravity="top"
     />
-<com.airbnb.lottie.LottieAnimationView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:lottie_autoPlay="true"
-    app:lottie_loop="true"
-    app:lottie_fileName="91198-splash-chosen.json"
+<!--<com.airbnb.lottie.LottieAnimationView-->
+<!--    android:layout_width="500dp"-->
+<!--    android:layout_height="800dp"-->
+<!--    app:lottie_autoPlay="true"-->
+<!--    app:lottie_loop="true"-->
+<!--    app:lottie_fileName="91198-splash-chosen.json"-->
 
 
-    />
+<!--    />-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/payment"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-150dp"
+        android:layout_marginTop="-52dp"
         android:fontFamily="@font/graph"
         android:text="شارژینو"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:textSize="50sp" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#121212"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -6,14 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class BuychargeActivity extends AppCompatActivity {
     private Button menu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_buycharge);
         menu=findViewById(R.id.menu);
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             }
             public void openMainActivity(){
                 Intent intent;
-                intent = new Intent(MainActivity.this,BuychargeActivity.class);
+                intent = new Intent(BuychargeActivity.this,MainActivity.class);
                 startActivity(intent);
 
             }
