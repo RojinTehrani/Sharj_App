@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#292828">
+    android:background="#292828"
+    >
 
 
     <ImageView
@@ -17,7 +18,7 @@
         android:src="@drawable/profile" />
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
 
         android:id="@+id/menu"
         android:layout_width="40dp"
@@ -45,10 +46,9 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/graph"
             android:text="خرید شارژ"
+            android:textSize="40dp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="30dp"
-
             />
 
         <TextView
@@ -200,24 +200,13 @@
                     android:text="20"
                     android:textColor="@color/white" />
 
-                <!--                <TextView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_gravity="center"-->
-                <!--                    android:layout_marginLeft="20dp"-->
-                <!--                    android:fontFamily="sans-serif-thin"-->
-                <!--                    android:text="IRANCELL"-->
-                <!--                    android:textColor="@color/white"-->
-                <!--                    android:textSize="18dp"-->
-
-                <!--                    />-->
 
 
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_marginVertical="60dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="40dp"

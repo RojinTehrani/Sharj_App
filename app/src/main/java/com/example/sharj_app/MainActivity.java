@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             }
             public void openMainActivity(){
                 Intent intent;
-                intent = new Intent(MainActivity.this,BuychargeActivity.class);
+                intent = new Intent(MainActivity.this,CheckbillActivity.class);
                 startActivity(intent);
 
             }

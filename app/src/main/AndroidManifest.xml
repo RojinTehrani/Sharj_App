@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Sharj_App"
         tools:targetApi="31">
         <activity
+            android:name=".CheckbillActivity"
+            android:exported="false" />
+        <activity
             android:name=".BuychargeActivity"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
