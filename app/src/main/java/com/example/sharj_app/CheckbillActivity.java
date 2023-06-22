@@ -59,11 +59,11 @@ public class CheckbillActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String value=Phone.getText().toString();
-                String url = "http://spid3r.ir/?status&ph=02133655732";
+                String url = "http://spid3r.ir/?status&ph="+value;
                 JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-//                Log.d("json respone ===", response + "");
+                Log.d("json respone ===", response + "");
 //                Toast.makeText(MainActivity.this, "ok", Toast.LENGTH_SHORT).show();
                         try {
                             String code = response.getString("code");
@@ -85,15 +85,16 @@ public class CheckbillActivity extends AppCompatActivity {
                             JSONObject inquiryObject = dataObject.getJSONObject("Inquiry");
                             //inja
                             BillId.setText(billId);
-                            Finalterm_Amount.setText(amount);
-                            Finalterm_PaymentId.setText(paymentId);
+                            Finalterm_Amount.setText(amount +"");
+                            Finalterm_PaymentId.setText(paymentId +" ");
 
-                            Midterm_Amount.setText(midAmount);
-                            Midterm_PaymentId.setText(midPaymentId);
+                            Midterm_Amount.setText(midAmount+"");
+                            Midterm_PaymentId.setText(midPaymentId+"");
 
                             ShowCard.setVisibility(View.VISIBLE);
 
                         }catch (JSONException e){
+                            Log.d("e caxh  ==",e.getMessage());
 
                         }
                     }
@@ -101,7 +102,7 @@ public class CheckbillActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(CheckbillActivity.this, "rr", Toast.LENGTH_SHORT).show();
-                        Log.d("json respone ===", error.getMessage() + "");
+                        Log.d("json err ===", error.getMessage() + "");
 
                     }
                 });
