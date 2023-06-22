@@ -2,6 +2,7 @@ package com.example.sharj_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -70,6 +71,11 @@ public class BuychargeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Amount=50000;
+                if(five.isPressed()) {
+                    five.setBackground(getDrawable(R.drawable.circleclicked));
+                    twenty.setBackground(getDrawable(R.drawable.circle));
+                    ten.setBackground(getDrawable(R.drawable.circle));
+                }
             }
         });
 
@@ -77,6 +83,11 @@ public class BuychargeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Amount=100000;
+                if(ten.isPressed()) {
+                    ten.setBackground(getDrawable(R.drawable.circleclicked));
+                    five.setBackground(getDrawable(R.drawable.circle));
+                    twenty.setBackground(getDrawable(R.drawable.circle));
+                }
 
             }
         });
@@ -85,25 +96,41 @@ public class BuychargeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Amount=200000;
-
+                if(twenty.isPressed()) {
+                    twenty.setBackground(getDrawable(R.drawable.circleclicked));
+                    five.setBackground(getDrawable(R.drawable.circle));
+                    ten.setBackground(getDrawable(R.drawable.circle));
+                }
             }
         });
         mci.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 Operator=1;
+                    mci.setBorderColor(R.color.darkpurple);
+                mci.setBorderOverlay(true);
+
             }
         });
         irancell.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 Operator=2;
+                irancell.setBorderOverlay(true);
+                irancell.setBorderColor(R.color.darkpurple);
+
             }
         });
         rightel.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 Operator=3;
+                rightel.setBorderOverlay(true);
+                rightel.setBorderColor(R.color.darkpurple);
+
             }
         });
 
