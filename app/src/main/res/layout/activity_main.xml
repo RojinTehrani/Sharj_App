@@ -2,178 +2,315 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#292828">
-
-
-    <ImageView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2B2B2B">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:src="@drawable/profile" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/profile"
+        android:backgroundTint="@color/white"/>
 
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatButton
+
         android:id="@+id/menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/menu" />
+        android:background="@drawable/menu"
+        android:backgroundTint="@color/white" />
 
-    <LinearLayout
-        android:id="@+id/title"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/circle_top">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l1"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/menu"
-        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:fontFamily="@font/graph"
+            android:layout_centerHorizontal="true"
+            android:text="شارژینو"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="50dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-thin"
-            android:text="Buy Charge"
-            android:textColor="@color/white"
-            android:textSize="30dp"
 
-            />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bill"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#232323"
+            android:layout_margin="15dp">
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-thin"
-            android:text="Select Price"
-            android:textColor="@color/white"
-            android:textSize="18dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
 
-            />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bill3"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/graph"
+                    android:layout_gravity="center"
+                    android:text="استعلام قبض تلفن"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buycharge"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#232323"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/simcard2"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/graph"
+                    android:layout_gravity="center"
+                    android:text="خرید شارژ"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
 
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_alignParentBottom="true">
-
 
         <LinearLayout
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-            android:layout_margin="20dp"
-            android:background="@drawable/me"
-            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="#232323"
+                android:layout_margin="15dp">
 
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/me2">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/mtn"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="1dp" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="sans-serif-thin"
-                    android:text="IRANCELL"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
-                    />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/paybill"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/graph"
+                        android:layout_gravity="center"
+                        android:text="پرداخت قبض"
+                        android:textColor="@color/white"
+                        />
 
 
-            </LinearLayout>
 
-            <LinearLayout
+                </LinearLayout>
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/me2">
+            </androidx.cardview.widget.CardView>
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/mci"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="1dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="#232323"
+                android:layout_margin="15dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="sans-serif-thin"
-                    android:text="HAMRAHAVALL"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
-                    />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/me2">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/rtl"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="1dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="sans-serif-thin"
-                    android:text="RITEL"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-
-                    />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/card1"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/graph"
+                        android:layout_gravity="center"
+                        android:text="کارت به کارت"
+                        android:textColor="@color/white"
+                        />
 
 
-            </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
 
 
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+
+        <LinearLayout
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="40dp"
-            android:layout_marginVertical="20dp"
-            android:background="@drawable/btn"
-            android:text="خرید شارژ"
-            android:textColor="@color/white"
+            android:gravity="center">
 
-            />
-    </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="#232323"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/wallet"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/graph"
+                        android:layout_gravity="center"
+                        android:text="شارژ کیف پول"
+                        android:textColor="@color/white"
+                        />
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="#232323"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/cellular2"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/graph"
+                        android:layout_gravity="center"
+                        android:text="خرید اینترنت"
+                        android:textColor="@color/white"
+                        />
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 </RelativeLayout>
