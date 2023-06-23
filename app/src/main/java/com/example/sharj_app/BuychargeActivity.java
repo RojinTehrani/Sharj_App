@@ -1,6 +1,7 @@
 package com.example.sharj_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -44,7 +45,6 @@ public class BuychargeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_buycharge);
         menu=findViewById(R.id.menu);
         mci=findViewById(R.id.mci);
@@ -140,15 +140,18 @@ public class BuychargeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 phonenumber = PhoneNumber.getText().toString();
 
+
                 String url = "http://spid3r.ir/?charge&ph=" + phonenumber + "&op=" + Operator + "&am=" + Amount;
+
                 JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        try {//put a log in here///
+                        try {
                             Log.d("respon ====", response + "");
                             String url = response.getString("url");
                             Uri webpage = Uri.parse(url);
                             Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                            startActivity(intent);
 
 
                             if (intent.resolveActivity(getPackageManager()) != null) {
@@ -163,7 +166,7 @@ public class BuychargeActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
-                        Log.d("err ===", error.getMessage() + ""); //run kon test bgir
+                        Log.d("err ===", error.getMessage() + "");
 
                     }
                 });
